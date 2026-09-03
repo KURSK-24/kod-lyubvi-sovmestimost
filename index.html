@@ -47,6 +47,11 @@ h2{font-family:var(--serif);font-weight:800;font-size:19px;margin:0 0 8px;color:
 p{line-height:1.55;margin:0 0 14px;color:var(--ink-dim)}
 .lede{font-size:16px;color:var(--ink)}
 
+.author-row{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.author-photo{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--yellow);flex:0 0 52px}
+.author-name{font-family:var(--serif);font-weight:800;font-size:14.5px;color:var(--ink)}
+.author-role{font-size:12.5px;color:var(--ink-faint)}
+
 .badges{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 20px}
 .badge{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--ink-dim)}
 
@@ -129,6 +134,13 @@ a.cta-link{text-decoration:none}
 
   <!-- ЭКРАН 1: обложка + ввод дат (текст автора, финал) -->
   <section id="screen-cover" class="screen active">
+    <div class="author-row">
+      <img src="assets/natalya-portrait.jpg" alt="Наталья Кравченко" class="author-photo">
+      <div>
+        <div class="author-name">Наталья Кравченко</div>
+        <div class="author-role">нумеролог, метод «Матрица судьбы»</div>
+      </div>
+    </div>
     <div class="eyebrow">Код любви</div>
     <h1>Совместимость по датам рождения</h1>
     <p class="lede">Узнай, что на самом деле происходит в ваших отношениях</p>
