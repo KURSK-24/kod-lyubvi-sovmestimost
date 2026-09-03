@@ -138,6 +138,17 @@ ul.bul li::before{content:"—";position:absolute;left:0;color:var(--gold)}
 .expert .role{font-size:13px;color:var(--ink-faint)}
 
 a.cta-link{text-decoration:none}
+
+.pulse-line{color:var(--ink);font-weight:600;font-size:13px}
+.pulse-heart{display:inline-block;animation:heartPulse 1.6s ease-in-out infinite}
+.pulse-heart:last-child{animation-delay:.5s}
+@keyframes heartPulse{
+  0%,100%{transform:scale(1);opacity:.75}
+  50%{transform:scale(1.35);opacity:1}
+}
+@media (prefers-reduced-motion: reduce){
+  .pulse-heart{animation:none}
+}
 </style>
 </head>
 <body>
@@ -286,7 +297,7 @@ a.cta-link{text-decoration:none}
       <a class="cta-link" href="https://t.me/KravchenkoNataliay?text=%D0%A1%D0%9E%D0%92%D0%9C%D0%95%D0%A1%D0%A2%D0%98%D0%9C%D0%9E%D0%A1%D0%A2%D0%AC" target="_blank" rel="noopener">
         <button class="btn">Купить разбор</button>
       </a>
-      <p class="fineprint">Нажми на кнопку — попадёшь ко мне в личку, я отправлю тебе ссылку на оплату</p>
+      <p class="fineprint pulse-line"><span class="pulse-heart">❤️</span> Нажми на кнопку — попадёшь ко мне в личку, я отправлю тебе ссылку на оплату <span class="pulse-heart">❤️</span></p>
     </div>
 
     <button class="btn btn-ghost" style="margin-top:20px" onclick="restart()">Рассчитать ещё раз</button>
