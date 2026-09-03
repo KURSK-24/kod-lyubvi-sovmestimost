@@ -100,6 +100,12 @@ ul.bul{margin:0 0 14px;padding-left:0;list-style:none}
 ul.bul li{position:relative;padding-left:20px;margin-bottom:8px;line-height:1.5;color:var(--ink-dim)}
 ul.bul li::before{content:"—";position:absolute;left:0;color:var(--gold)}
 
+.plus-block{background:rgba(228,178,76,.08);border:1.5px solid rgba(228,178,76,.35);border-radius:var(--radius);padding:20px;margin:18px 0}
+.minus-block{background:rgba(255,138,122,.08);border:1.5px solid rgba(255,138,122,.35);border-radius:var(--radius);padding:20px;margin:18px 0}
+.pm-label{display:inline-block;font-family:var(--serif);font-weight:800;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;padding:5px 12px;border-radius:999px;margin-bottom:10px}
+.pm-plus{background:var(--gold);color:#141416}
+.pm-minus{background:var(--coral);color:#141416}
+
 .warn-box{background:var(--panel-2);border-left:3px solid var(--coral);border-radius:12px;padding:16px 18px;margin:18px 0}
 .warn-box .t{font-weight:800;color:var(--ink);margin-bottom:6px}
 
@@ -120,6 +126,11 @@ ul.bul li::before{content:"—";position:absolute;left:0;color:var(--gold)}
 .offer-list{margin:12px 0 4px;padding-left:0;list-style:none}
 .offer-list li{padding-left:22px;position:relative;margin-bottom:8px;font-size:14.5px;color:var(--ink-dim)}
 .offer-list li::before{content:"✓";position:absolute;left:0;color:var(--yellow);font-weight:800}
+
+.price-block{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:20px 0 4px}
+.price-old{font-family:var(--serif);font-size:18px;color:var(--ink-faint);text-decoration:line-through}
+.price-new{font-family:var(--serif);font-weight:900;font-size:32px;color:var(--yellow)}
+.price-timer{font-size:12.5px;color:var(--coral);font-weight:700}
 
 .expert{display:flex;gap:14px;align-items:center;margin:18px 0}
 .expert img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--yellow)}
@@ -211,17 +222,21 @@ a.cta-link{text-decoration:none}
       <div class="tagline" id="r-tagline">Пара, построенная на притяжении и выборе сердцем</div>
     </div>
 
-    <div class="section-title">Здоровые отношения: какими они могут быть у вас</div>
-    <p id="r-healthy"></p>
+    <div class="plus-block">
+      <div class="pm-label pm-plus">💛 В плюсе</div>
+      <div class="section-title" style="margin-top:0">Здоровые отношения: какими они могут быть у вас</div>
+      <p id="r-healthy"></p>
+      <div class="section-title">Как это выглядит в обычной жизни</div>
+      <ul class="bul" id="r-bullets"></ul>
+    </div>
 
-    <div class="section-title">Как это выглядит в обычной жизни</div>
-    <ul class="bul" id="r-bullets"></ul>
-
-    <div class="section-title">Негативные сценарии, которые разрушают ваши отношения</div>
-    <p id="r-negative"></p>
-
-    <div class="section-title">Что будет, если ничего не менять</div>
-    <p id="r-consequence"></p>
+    <div class="minus-block">
+      <div class="pm-label pm-minus">⚠️ В минусе</div>
+      <div class="section-title" style="margin-top:0">Негативные сценарии, которые разрушают ваши отношения</div>
+      <p id="r-negative"></p>
+      <div class="section-title">Что будет, если ничего не менять</div>
+      <p id="r-consequence"></p>
+    </div>
 
     <div class="warn-box">
       <div class="t">⚠️ Если ты узнала себя в негативных сценариях, это не приговор и не твоя вина</div>
@@ -270,10 +285,16 @@ a.cta-link{text-decoration:none}
         </div>
       </div>
 
+      <div class="price-block">
+        <span class="price-old">10 000 ₽</span>
+        <span class="price-new">2 490 ₽</span>
+        <span class="price-timer">цена держится 48 часов</span>
+      </div>
+
       <a class="cta-link" href="https://t.me/KravchenkoNataliay?text=%D0%A1%D0%9E%D0%92%D0%9C%D0%95%D0%A1%D0%A2%D0%98%D0%9C%D0%9E%D0%A1%D0%A2%D0%AC" target="_blank" rel="noopener">
-        <button class="btn">Записаться на разбор</button>
+        <button class="btn">Купить разбор</button>
       </a>
-      <p class="fineprint">Кнопка ведёт в личные сообщения — напишу тебе все условия лично</p>
+      <p class="fineprint">Нажми на кнопку — попадёшь ко мне в личку, я отправлю тебе ссылку на оплату</p>
     </div>
 
     <button class="btn btn-ghost" style="margin-top:20px" onclick="restart()">Рассчитать ещё раз</button>
